@@ -83,7 +83,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler
-  jekyll-last-modified-at
+  jekyll
   rake
   uswds-jekyll!
 
