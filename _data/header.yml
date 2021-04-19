@@ -21,7 +21,7 @@ type: extended
 # Configuration for site header logo
 # If the logo is external add external: true
 logo:
-  src: https://18f.gsa.gov/assets/img/logos/18f-logo.svg
+  src: /assets/img/logo/icf+logo.png
   alt: 18F
   external: true
 

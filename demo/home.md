@@ -5,17 +5,17 @@ permalink: /
 layout: home
 
 hero:
-  image: /assets/uswds/img/hero.png
+  image: /assets/img/hero.png
   callout:
-    alt: "Hero callout:"
-    text: Bring attention to a current priority
+    alt: "Welcome"
+    text: To the Nex+ Library
   button:
     href: /callout/
-    text: Call to action
+    text: Get Started
   link:
     text: Link to more about that priority
     href: /link/
-  content: Support the callout with some short explanatory text. You don't need more than a couple of sentences.
+  content: This library allows us to use the USWDS customized for our clients.
 
 tagline: A tagline highlights your approach.
 intro: |
@@ -54,3 +54,4 @@ Everything up to this point [should help people](<javascript:void(0);>) understa
 {:.usa-intro }
 
 [Call to action](#){: .usa-button.usa-button--big }
+
