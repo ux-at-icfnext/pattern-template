@@ -37,12 +37,12 @@ graphics:
   - image:
       src: /assets/uswds/img/circle-124.png
       alt: ""
-    title: Accessible to your whole organization.
+    title: Accessible to your whole organization
     description: No need to worry about different contracts building out different web properties. This library can be hosted to be available for all to view and use.
   - image:
       src: /assets/uswds/img/circle-124.png
       alt: ""
-    title: Quick Design Prototypes.
+    title: Quick Design Prototypes
     description: With your full library available, staging design prototypes is quick, allowing for ideation and approvals.
 ---
 
@@ -50,7 +50,7 @@ graphics:
 
 Check out our [documentation](/documentation) on how to get your library started.
 
-[Get Started](#){: .usa-button.usa-button--big }
+[Get Started](/documentation){: .usa-button.usa-button--big }
 
 
 

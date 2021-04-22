@@ -1,7 +1,7 @@
 ---
 title: Documentation
 description: This is a documentation page.
-permalink: /docs/
+permalink: /page/
 
 layout: post
 sidenav: docs
