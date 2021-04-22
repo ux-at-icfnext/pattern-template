@@ -16,7 +16,7 @@ primary:
     href: /start/
   - text: Library
     href: /library/
-  - text: Documentation
+  - text: Docs
     href: /docs/
   - text: Updates
     href: /releases/
@@ -42,6 +42,8 @@ footer:
   - text: Github Repo
     href: https://github.com/ux-at-icfnext/pattern-template
     external: true
+  - text: Sketch Library Download
+    href: /sketch/
   - text: U.S. Web Design System
     href: https://designsystem.digital.gov/
     external: true
