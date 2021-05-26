@@ -1,0 +1,147 @@
+---
+layout: default
+---
+<div id="main-content" class="grid-container">
+
+    <h1>{{ page.title }}</h1>
+
+    {%  if page.usa-link %}
+            <div class="usa-usage">
+                    <p>The following component is based on the {{ page.pattern-name}} from the USWDS. The information below shows how the component was customized to match our site brand. Please review the USWDS for more information on how to use this component.</p>
+                    <p><a href="{{ page.usa-link }}" class="btn"> USWDS {{ page.pattern-name }}</a></p>
+            </div>
+    {% endif %}
+
+    <h4>Contents:</h4>
+    <ul>
+            <li><a href="#design">Design</a></li>
+            {% if page.description %}
+                <li><a href="#description">Description</a></li>
+            {% endif %}
+            <li><a href="#specifications">Specifications</a></li>
+            <li><a href="#code">Code Examples</a></li>
+            {%  if page.varspath %}
+                <li><a href="#vars">Variations</a></li>
+            {% endif %}
+            
+    </ul>
+
+    <a name="design"></a>
+    <h3>Design</h3>
+    <div class="design-preview">
+    {% if page.htmlpath %}
+    {% include {{ page.htmlpath }} %}
+    {% endif %}
+    </div>
+
+    {% if page.description %}
+    <a name="description"></a>
+        <h3>Description</h3>
+        {{ page.description }} 
+    {% endif %}
+
+
+    <a name="specifications"></a>
+    <h3>Specifications</h3>
+    {{ page.specification }} 
+    {% if page.schema %}
+    <table class="usa-table">
+        <thead>
+            <tr>
+                    <th>field name</th>
+                    <th>field type</th>
+                    <th>class name</th>
+                    <th>required</th>
+                    <th>content rules</th>
+                    <th>example content</th>
+            </tr>
+        </thead>
+            {% for spec in page.schema %}
+            <tr>
+                <td>{{ spec.fieldname }}</td>
+                <td>{{ spec.type }}</td>
+                <td>{{ spec.class-name }}</td>
+                <td>{{ spec.required }}</td>
+                <td>{{ spec.content }}</td>
+                <td>{{ spec.example }}</td>
+            </tr>
+            {% endfor %}
+    </table>
+    {% endif %}
+
+    <div class="page-content">
+            {{ content }}
+    </div>
+
+    <a name="code"></a>
+    <h3>Code</h3>
+    <div class="usa-accordion">
+    <h4 class="usa-accordion__heading">
+            <button class="usa-accordion__button"
+            aria-expanded="false"
+            aria-controls="p1">
+            HTML
+            </button>
+        </h4>
+        <div id="p1" class="usa-accordion__content usa-prose syntax-box">
+            {% highlight html %}
+                {% if page.htmlpath %}
+                    {% include {{ page.htmlpath }} %}
+                {% endif %}
+            {% endhighlight %}
+
+        </div>
+    </div>
+    <div class="usa-accordion">
+    <h4 class="usa-accordion__heading">
+            <button class="usa-accordion__button"
+            aria-expanded="false"
+            aria-controls="p2">
+            CSS
+            </button>
+        </h4>
+        <div id="p2" class="usa-accordion__content usa-prose syntax-box">
+            {% highlight html %}
+                {% if page.csspath %}
+                    {% include {{ page.csspath }} %}
+                {% endif %}
+            {% endhighlight %}
+
+        </div>
+    </div>
+
+
+    {% if page.varspath %}
+    <br /><br />
+    <a name="vars"></a>
+        <h3>Design Variations</h3>
+        <div class="design-preview">
+            {% include {{ page.varspath }} %}
+        </div>
+        <br />
+        <div class="usa-accordion">
+            <h4 class="usa-accordion__heading">
+                <button class="usa-accordion__button"
+                aria-expanded="false"
+                aria-controls="p3">
+                HTML
+                </button>
+            </h4>
+            <div id="p3" class="usa-accordion__content usa-prose syntax-box">
+                {% highlight html %}
+                    {% include {{ page.varspath }} %}
+                {% endhighlight %}
+
+            </div>
+        </div>
+
+    {% endif %}
+
+
+
+
+    {% if page.last-updated %}
+            <div class="last-updated" style="font-size: 14px;">Last Updated: {{ page.last-updated }}</div>
+    {% endif %}
+
+</div>
